@@ -4,6 +4,6 @@ import entities.User;
 
 public interface UserDao {
 	
-	User findById(Integer id);
+	User findById(User obj);
 
 }
