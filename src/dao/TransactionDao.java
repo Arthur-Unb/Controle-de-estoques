@@ -11,7 +11,7 @@ public interface TransactionDao {
 	void update(Transaction obj);
 
 	Transaction findById(Integer id);
+
 	List<Transaction> findAll();
-	
 
 }

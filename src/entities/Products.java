@@ -10,20 +10,24 @@ public class Products {
 
 	private Double price;
 
-	public Products(Integer id, String productName, Integer quantity, Double priceBuy, Double priceSell) {
-		this.productId = id;
+	public Products(Integer productId, String productName, Integer quantity, Double price) {
+		super();
+		this.productId = productId;
 		this.productName = productName;
 		this.quantity = quantity;
-		this.price = priceBuy;
-		this.price = priceSell;
+		this.price = price;
 	}
 
-	public Integer getId() {
+	public Products() {
+
+	}
+
+	public Integer getProductId() {
 		return productId;
 	}
 
-	public void setId(Integer id) {
-		this.productId = id;
+	public void setProductId(Integer productId) {
+		this.productId = productId;
 	}
 
 	public String getProductName() {
@@ -42,20 +46,12 @@ public class Products {
 		this.quantity = quantity;
 	}
 
-	public Double getPriceBuy() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPriceBuy(Double priceBuy) {
-		this.price = priceBuy;
-	}
-
-	public Double getPriceSell() {
-		return price;
-	}
-
-	public void setPriceSell(Double priceSell) {
-		this.price = priceSell;
+	public void setPrice(Double price) {
+		this.price = price;
 	}
 
 	// Métodos:

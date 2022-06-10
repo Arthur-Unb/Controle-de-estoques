@@ -1,5 +1,8 @@
 package view;
 
+import dao.ProductsDaoJDBC;
+import db.DB;
+import entities.Products;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -7,19 +10,19 @@ import javafx.scene.control.TextField;
 public class CadastroViewController {
 
 	@FXML
-	private TextField productId;
+	private TextField txtproductId;
 
 	@FXML
-	private TextField productName;
+	private TextField txtproductName;
 
 	@FXML
-	private TextField productQuantity;
+	private TextField txtproductQuantity;
 
 	@FXML
-	private TextField productPrice;
+	private TextField txtproductPrice;
 
 	@FXML
-	private TextField productIdSearch;
+	private TextField txtproductIdSearch;
 
 	@FXML
 	private Button buttonCadastro;
@@ -33,6 +36,19 @@ public class CadastroViewController {
 	@FXML
 	public void onBtNewActionCadastrar() {
 
+		ProductsDaoJDBC gravar = new ProductsDaoJDBC(DB.getConnection());
+
+		Products p = new Products();
+
+		p.setProductId(Integer.valueOf(txtproductId.getText()));
+		p.setProductName(txtproductName.getText());
+		p.setQuantity(Integer.valueOf(txtproductQuantity.getText()));
+		p.setPrice(Double.valueOf(txtproductPrice.getText()));
+
+		System.out.println(p);
+
+		gravar.insert(p);
+
 	}
 
 	@FXML
@@ -44,7 +60,5 @@ public class CadastroViewController {
 	public void onBtNewActionExclude() {
 
 	}
-	
-	
 
 }

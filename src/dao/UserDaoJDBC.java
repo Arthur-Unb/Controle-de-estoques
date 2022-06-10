@@ -42,7 +42,6 @@ public class UserDaoJDBC implements UserDao {
 
 		} finally {
 			DB.closeStatement(st);
-			DB.closeConnection(rs);
 
 		}
 
