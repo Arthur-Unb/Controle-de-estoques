@@ -22,17 +22,18 @@
       <TextField fx:id="txtIdFuncionario" layoutX="514.0" layoutY="42.0" />
       <Text layoutX="514.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id funcionário" />
       <Text layoutX="356.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <TableView editable="true" layoutX="38.0" layoutY="150.0" prefHeight="410.0" prefWidth="728.0">
+      <TableView fx:id="tableViewTransacao" editable="true" layoutX="38.0" layoutY="150.0" prefHeight="410.0" prefWidth="728.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Id da transação" />
-          <TableColumn prefWidth="75.0" text="Id do produto" />
-            <TableColumn prefWidth="75.0" text="Id do funcionário" />
-            <TableColumn prefWidth="75.0" text="Quantidade" />
-            <TableColumn prefWidth="75.0" text="Tipo de transação" />
+          <TableColumn fx:id="tableColumnIdTransacao" prefWidth="75.0" text="Id da transação" />
+          <TableColumn fx:id="tableColumnIdProduto" prefWidth="75.0" text="Id do produto" />
+            <TableColumn fx:id="tableColumnIdFuncionario" prefWidth="75.0" text="Id do funcionário" />
+            <TableColumn fx:id="tableColumnQuantidade" prefWidth="75.0" text="Quantidade" />
+            <TableColumn fx:id="tableColumnTipoTransacao" prefWidth="75.0" text="Tipo de transação" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <Button fx:id="testeButton" layoutX="453.0" layoutY="106.0" mnemonicParsing="false" onAction="#updateTableView" text="Button" />
    </children>
 </AnchorPane>

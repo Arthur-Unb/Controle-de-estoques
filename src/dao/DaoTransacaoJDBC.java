@@ -10,7 +10,6 @@ import java.util.List;
 
 import db.DB;
 import db.DbException;
-import entities.ModelProdutos;
 import entities.ModelTransacao;
 
 public class DaoTransacaoJDBC implements DaoTransacao {
@@ -57,8 +56,8 @@ public class DaoTransacaoJDBC implements DaoTransacao {
 
 		try {
 
-			st = conn.prepareStatement(
-					"UPDATE banco_estoque.tbl_produto " + "SET pro_estoque = ?" + "WHERE pk_id_produto = ?");
+			st = conn.prepareStatement("update banco_estoque.tbl_produto \r\n" + "set pro_estoque = pro_estoque + ?\r\n"
+					+ "where pk_id_produto = ?;");
 
 			st.setInt(1, obj.getQuantidadeProduto());
 			st.setInt(2, obj.getIdProduto());
