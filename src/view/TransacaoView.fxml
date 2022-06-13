@@ -16,9 +16,9 @@
       <TextField fx:id="txtIdProdutoField" layoutX="38.0" layoutY="42.0" />
       <TextField fx:id="txtQuantidadeField" layoutX="197.0" layoutY="42.0" />
       <Text layoutX="38.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id transação" />
-      <TextField fx:id="txtIdTransacaoField" layoutX="38.0" layoutY="106.0" />
+      <TextField fx:id="txtIdProdutoBuscarField" layoutX="38.0" layoutY="106.0" />
       <Button fx:id="cadastratButton" layoutX="197.0" layoutY="106.0" mnemonicParsing="false" onAction="#onBtCadastrar" text="Cadastrar" />
-      <Button fx:id="buscarButton" layoutX="272.0" layoutY="106.0" mnemonicParsing="false" text="Buscar" />
+      <Button fx:id="buscarButton" layoutX="272.0" layoutY="106.0" mnemonicParsing="false" onAction="#onBtBuscar" text="Buscar" />
       <TextField fx:id="txtIdFuncionario" layoutX="514.0" layoutY="42.0" />
       <Text layoutX="514.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id funcionário" />
       <Text layoutX="356.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" />

@@ -5,7 +5,7 @@ import java.util.TimerTask;
 import javafx.scene.text.Text;
 
 public class Timer {
-	
+
 	Timer timer = new Timer();
 
 	public void LimparTexto(Text t) {
@@ -19,4 +19,4 @@ public class Timer {
 		}, delay, interval);
 	}
 
-	}
+}

@@ -18,7 +18,7 @@ public class TransacaoViewController implements Initializable {
 	private TextField txtIdProdutoField;
 
 	@FXML
-	private TextField txtIdTransacaoField;
+	private TextField txtIdProdutoBuscarField;
 
 	@FXML
 	private TextField txtQuantidadeField;
@@ -63,6 +63,19 @@ public class TransacaoViewController implements Initializable {
 			cadastrar.update(item);
 
 		}
+
+	}
+
+	@FXML
+	private void onBtBuscar() {
+
+		DaoTransacaoJDBC buscar = new DaoTransacaoJDBC(DB.getConnection());
+
+		ModelTransacao item = new ModelTransacao();
+
+		int x = Integer.valueOf(txtIdProdutoBuscarField.getText());
+
+		System.out.println(buscar.findById(x));
 
 	}
 
