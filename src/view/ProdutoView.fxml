@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CadastroViewController">
+   <children>
+      <Text layoutX="38.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código produto" />
+      <Text layoutX="197.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade" />
+      <Text layoutX="356.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo transação" />
+      <TextField layoutX="356.0" layoutY="42.0" />
+      <TextField layoutX="38.0" layoutY="42.0" />
+      <TextField layoutX="197.0" layoutY="42.0" />
+   </children>
+</AnchorPane>

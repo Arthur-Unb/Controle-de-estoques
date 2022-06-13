@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TransacaoViewController">
+   <children>
+      <Text layoutX="38.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código produto" />
+      <Text layoutX="197.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade" />
+      <Text layoutX="356.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo transação" />
+      <TextField fx:id="txtTipoField" layoutX="356.0" layoutY="42.0" />
+      <TextField fx:id="txtIdProdutoField" layoutX="38.0" layoutY="42.0" />
+      <TextField fx:id="txtQuantidadeField" layoutX="197.0" layoutY="42.0" />
+      <Text layoutX="38.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id transação" />
+      <TextField fx:id="txtIdTransacaoField" layoutX="38.0" layoutY="106.0" />
+      <Button fx:id="cadastratButton" layoutX="197.0" layoutY="106.0" mnemonicParsing="false" onAction="#onBtCadastrar" text="Cadastrar" />
+      <Button fx:id="buscarButton" layoutX="272.0" layoutY="106.0" mnemonicParsing="false" text="Buscar" />
+      <TextField fx:id="txtIdFuncionario" layoutX="514.0" layoutY="42.0" />
+      <Text layoutX="514.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id funcionário" />
+      <Text layoutX="356.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <TableView editable="true" layoutX="38.0" layoutY="150.0" prefHeight="410.0" prefWidth="728.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Id da transação" />
+          <TableColumn prefWidth="75.0" text="Id do produto" />
+            <TableColumn prefWidth="75.0" text="Id do funcionário" />
+            <TableColumn prefWidth="75.0" text="Quantidade" />
+            <TableColumn prefWidth="75.0" text="Tipo de transação" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

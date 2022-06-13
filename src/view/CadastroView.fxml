@@ -10,12 +10,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.CadastroViewController">
    <children>
-      <Text layoutX="36.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id do Produto">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Text>
-      <Text layoutX="207.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do produto">
+      <Text layoutX="34.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do produto">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -25,24 +20,23 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="550.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preço">
+      <Text layoutX="207.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preço">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField fx:id="txtproductId" layoutX="36.0" layoutY="45.0" />
-      <TextField fx:id="txtproductName" layoutX="207.0" layoutY="45.0" />
-      <TextField fx:id="txtproductQuantity" layoutX="379.0" layoutY="45.0" />
-      <TextField fx:id="txtproductPrice" layoutX="550.0" layoutY="45.0" />
-      <Button fx:id="buttonCadastro" layoutX="36.0" layoutY="82.0" mnemonicParsing="false" onAction="#onBtNewActionCadastrar" text="Cadastrar Produto" />
+      <TextField fx:id="txtNome" layoutX="36.0" layoutY="45.0" />
+      <TextField fx:id="txtValor" layoutX="207.0" layoutY="45.0" />
+      <TextField fx:id="txtQuantidade" layoutX="379.0" layoutY="45.0" />
+      <Button fx:id="cadastrarButton" layoutX="36.0" layoutY="82.0" mnemonicParsing="false" onAction="#onBtCadastrar" text="Cadastrar Produto" />
       <Text layoutX="36.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id do Produto">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <TextField fx:id="txtproductIdSearch" layoutX="36.0" layoutY="144.0" />
-      <Button layoutX="36.0" layoutY="178.0" mnemonicParsing="false" text="Buscar Produto" />
-      <Button layoutX="36.0" layoutY="211.0" mnemonicParsing="false" text="Excluir Produto" />
+      <TextField fx:id="txtId" layoutX="36.0" layoutY="144.0" />
+      <Button fx:id="buscarButton" layoutX="36.0" layoutY="178.0" mnemonicParsing="false" onAction="#onBtBuscar" text="Buscar Produto" />
+      <Button fx:id="excluirButton" layoutX="36.0" layoutY="211.0" mnemonicParsing="false" onAction="#onBtExcluir" text="Excluir Produto" />
       <TableView layoutX="36.0" layoutY="259.0" prefHeight="329.0" prefWidth="747.0">
         <columns>
           <TableColumn prefWidth="105.0" text="Id do produto" />
@@ -54,5 +48,28 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <Text fx:id="txtShowMessage" layoutX="207.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtNomeBusca" layoutX="207.0" layoutY="144.0" />
+      <TextField fx:id="txtQuantidadeBusca" layoutX="379.0" layoutY="144.0" />
+      <TextField fx:id="txtValorBusca" layoutX="546.0" layoutY="144.0" />
+      <Text layoutX="207.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome do produto">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="546.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Preço">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="379.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
